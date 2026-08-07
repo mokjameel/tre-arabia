@@ -55,8 +55,11 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:76px; }
-.nav-brand{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:19px; color:var(--teal-deep); }
+.nav-brand{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; color:var(--teal-deep); }
 .nav-brand img{ height:34px; width:34px; }
+.nav-brand-text{ display:flex; flex-direction:column; line-height:1.05; }
+.nav-brand-text .l1{ font-size:16px; letter-spacing:.14em; }
+.nav-brand-text .l2{ font-size:12.5px; letter-spacing:.14em; color:var(--sage); font-weight:500; margin-top:1px; }
 .nav-links{ display:flex; gap:30px; font-size:14.5px; font-weight:600; color:var(--teal-mid); }
 .nav-links a{ position:relative; padding:4px 0; }
 .nav-links a::after{
