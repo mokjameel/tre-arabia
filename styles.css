@@ -85,17 +85,15 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
     radial-gradient(ellipse 900px 500px at 78% 20%, rgba(23,51,44,.06), transparent 60%),
     var(--cream);
 }
-.hero .wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
-.hero-eyebrow{ margin-bottom:18px; }
-.hero h1{
-  font-size:clamp(34px,4.6vw,54px);
-  max-width:560px;
-}
-.hero h1 em{ font-style:italic; color:var(--brass); }
+.hero-single{ display:flex; justify-content:center; }
+.hero-content{ max-width:640px; text-align:center; }
+.hero-eyebrow{ margin-bottom:22px; }
+.hero-lockup{ width:100%; max-width:520px; margin:0 auto 26px; display:block; }
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
 .hero p.lede{
-  margin-top:20px; max-width:460px; font-size:16.5px; color:var(--teal-mid);
+  margin:0 auto; max-width:480px; font-size:16.5px; color:var(--teal-mid);
 }
-.hero-actions{ margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; }
+.hero-actions{ margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
 .btn{
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 26px; border-radius:3px; font-weight:700; font-size:14.5px;
@@ -106,40 +104,12 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
 .btn-ghost{ border:1.5px solid var(--teal-deep); color:var(--teal-deep); }
 .btn-ghost:hover{ background:var(--teal-deep); color:var(--cream); }
 
-.hero-stats{ display:flex; gap:34px; margin-top:44px; }
-.hero-stats div{ border-left:2px solid var(--line); padding-left:14px; }
+.hero-stats{ display:flex; gap:34px; margin-top:44px; justify-content:center; }
+.hero-stats div{ border-left:2px solid var(--line); padding-left:14px; text-align:left; }
 .hero-stats .n{ font-family:var(--serif); font-size:26px; color:var(--teal-deep); font-weight:600; }
 .hero-stats .l{ font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--sage); margin-top:2px; }
 
-/* spiral */
-.spiral-stage{ position:relative; aspect-ratio:1/1; max-width:440px; margin:0 auto; }
-.spiral-stage svg{ width:100%; height:100%; }
-.spiral-line{
-  transform-origin:center;
-  animation: breathe 7s ease-in-out infinite;
-}
-.spiral-core{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-}
-.spiral-core .hole{
-  width:19%; height:19%; border-radius:50%; background:var(--cream);
-  box-shadow:0 0 0 1px var(--line);
-  animation: pulse-hole 7s ease-in-out infinite;
-}
-@keyframes breathe{
-  0%,100%{ transform:rotate(0deg) scale(1); opacity:.92; }
-  50%{ transform:rotate(8deg) scale(1.035); opacity:1; }
-}
-@keyframes pulse-hole{
-  0%,100%{ transform:scale(1); }
-  50%{ transform:scale(1.12); }
-}
 
-@media (max-width:860px){
-  .hero .wrap{ grid-template-columns:1fr; }
-  .spiral-stage{ order:-1; max-width:280px; }
-  .hero h1, .hero p.lede{ max-width:100%; }
-}
 
 /* ============================================================
    SECTION SCAFFOLD
