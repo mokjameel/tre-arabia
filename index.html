@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,46 @@
 <meta name="description" content="TRE Arabia brings Tension & Trauma Releasing Exercises to Jeddah and the Gulf, led by Mohammed Salah — the first Arabic-speaking TRE Global–certified practitioner in the world.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
 <nav class="nav">
   <div class="wrap">
-    <a href="#top" class="nav-brand"><img src="mark.png" alt="TRE Arabia"><span class="nav-brand-text"><span class="l1">TRE</span><span class="l2">Arabia</span></span></a>
+    <a href="#top" class="nav-brand">
+      <img src="mark.png" alt="" class="nav-mark">
+      <img src="wordmark.png" alt="TRE Arabia" class="nav-wordmark">
+    </a>
     <div class="nav-links">
-      <a href="#what-is-tre">What is TRE</a>
-      <a href="#founder">Founder</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#testimonials">Stories</a>
+      <a href="#what-is-tre" data-en="What is TRE" data-ar="ما هو TRE">What is TRE</a>
+      <a href="#founder" data-en="Founder" data-ar="المؤسس">Founder</a>
+      <a href="#certification" data-en="Certification" data-ar="الشهادة">Certification</a>
+      <a href="#organizations" data-en="For Organizations" data-ar="للمؤسسات">For Organizations</a>
+      <a href="#testimonials" data-en="Stories" data-ar="قصص">Stories</a>
     </div>
-    <a href="#contact" class="nav-cta">Book a discovery call</a>
+    <div class="nav-right">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">EN / <span class="ar-label">AR</span></button>
+      <a href="#contact" class="nav-cta" data-en="Book a discovery call" data-ar="احجز مكالمة تعارف">Book a discovery call</a>
+    </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="wrap hero-single">
-    <div class="hero-content">
-      <div class="eyebrow hero-eyebrow">TRE Arabia · Jeddah, Saudi Arabia</div>
+    <div class="hero-content reveal">
+      <div class="eyebrow hero-eyebrow" data-en="TRE Arabia · Jeddah, Saudi Arabia" data-ar="TRE أرابيا · جدة، المملكة العربية السعودية">TRE Arabia · Jeddah, Saudi Arabia</div>
       <img src="hero-lockup.png" alt="TRE Arabia — Release begins within" class="hero-lockup">
       <h1 class="sr-only">Release begins within.</h1>
-      <p class="lede">TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake.</p>
+      <p class="lede" data-en="TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake." data-ar="TRE® هو تمرين جسدي بسيط يساعد الجهاز العصبي على تصريف التوتر والضغط والصدمات القديمة — دون الحاجة للحديث عن التفاصيل، فقط سبعة تمارين ورعشة الجسم الطبيعية.">TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Book a free discovery call</a>
-        <a href="#what-is-tre" class="btn btn-ghost">What is TRE?</a>
+        <a href="#contact" class="btn btn-primary" data-en="Book a free discovery call" data-ar="احجز مكالمة تعارف مجانية">Book a free discovery call</a>
+        <a href="#what-is-tre" class="btn btn-ghost" data-en="What is TRE?" data-ar="ما هو TRE؟">What is TRE?</a>
       </div>
       <div class="hero-stats">
-        <div><div class="n">2018</div><div class="l">Founded in Jeddah</div></div>
-        <div><div class="n">1st</div><div class="l">Arabic-speaking certified provider</div></div>
-        <div><div class="n">22</div><div class="l">Arab countries in mission</div></div>
+        <div><div class="n">2018</div><div class="l" data-en="Founded in Jeddah" data-ar="تأسست في جدة">Founded in Jeddah</div></div>
+        <div><div class="n">1st</div><div class="l" data-en="Arabic-speaking certified provider" data-ar="أول ممارس معتمد ناطق بالعربية">Arabic-speaking certified provider</div></div>
+        <div><div class="n">22</div><div class="l" data-en="Arab countries in mission" data-ar="دولة عربية ضمن الرسالة">Arab countries in mission</div></div>
       </div>
     </div>
   </div>
@@ -47,25 +54,25 @@
 
 <section id="what-is-tre">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">What is TRE</div>
-      <h2>Seven exercises. One natural reflex.</h2>
-      <p>Created by Dr. David Berceli, PhD, TRE® safely activates the body's own tremor mechanism — the same one animals use to discharge stress after a threat passes — to release deep muscular tension and calm the nervous system.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="What is TRE" data-ar="ما هو TRE">What is TRE</div>
+      <h2 data-en="Seven exercises. One natural reflex." data-ar="سبعة تمارين. رعشة طبيعية واحدة.">Seven exercises. One natural reflex.</h2>
+      <p data-en="Created by Dr. David Berceli, PhD, TRE® safely activates the body's own tremor mechanism — the same one animals use to discharge stress after a threat passes — to release deep muscular tension and calm the nervous system." data-ar="طوّر الدكتور David Berceli هذه الطريقة التي تُفعّل رعشة الجسم الطبيعية — نفس الآلية التي تستخدمها الحيوانات لتصريف التوتر بعد الخطر — لتحرير التوتر العضلي العميق وتهدئة الجهاز العصبي.">Created by Dr. David Berceli, PhD, TRE® safely activates the body's own tremor mechanism — the same one animals use to discharge stress after a threat passes — to release deep muscular tension and calm the nervous system.</p>
     </div>
-    <div class="tre-grid">
+    <div class="tre-grid reveal">
       <div>
-        <p>TRE doesn't require talking through what happened. It's a body-based (somatic) process: once the exercises trigger the natural shaking response, the body does the rest, discharging stored tension without needing to revisit the story behind it.</p>
-        <p>It's designed as a self-help tool — learned once, used for life. Many people also use it alongside therapy, physiotherapy, or other care, as a complement rather than a replacement.</p>
+        <p data-en="TRE doesn't require talking through what happened. It's a body-based (somatic) process: once the exercises trigger the natural shaking response, the body does the rest, discharging stored tension without needing to revisit the story behind it." data-ar="لا يتطلب TRE الحديث عن التفاصيل. إنها عملية جسدية بحتة: بعد أن تُحفّز التمارين استجابة الرعشة الطبيعية، يقوم الجسم بالباقي ويُصرّف التوتر المخزّن دون الحاجة للعودة إلى القصة وراءه.">TRE doesn't require talking through what happened. It's a body-based (somatic) process: once the exercises trigger the natural shaking response, the body does the rest, discharging stored tension without needing to revisit the story behind it.</p>
+        <p data-en="It's designed as a self-help tool — learned once, used for life. Many people also use it alongside therapy, physiotherapy, or other care, as a complement rather than a replacement." data-ar="صُممت كأداة للمساعدة الذاتية — تُتعلّم مرة وتُستخدم مدى الحياة. يستخدمها الكثيرون جنبًا إلى جنب مع العلاج النفسي أو الطبيعي، كعنصر مكمّل لا بديل.">It's designed as a self-help tool — learned once, used for life. Many people also use it alongside therapy, physiotherapy, or other care, as a complement rather than a replacement.</p>
       </div>
       <div>
-        <p style="font-weight:600; color:var(--teal-deep);">People report:</p>
+        <p style="font-weight:600; color:var(--teal-deep);" data-en="People report:" data-ar="ما يُشاركه المتدربون:">People report:</p>
         <ul class="benefit-list">
-          <li>Less worry &amp; anxiety</li>
-          <li>Better sleep</li>
-          <li>Reduced muscle &amp; back pain</li>
-          <li>More energy &amp; endurance</li>
-          <li>Greater emotional resilience</li>
-          <li>Relief alongside chronic conditions</li>
+          <li data-en="Less worry &amp; anxiety" data-ar="أقل قلقًا وتوترًا">Less worry &amp; anxiety</li>
+          <li data-en="Better sleep" data-ar="نوم أفضل">Better sleep</li>
+          <li data-en="Reduced muscle &amp; back pain" data-ar="تقليل آلام العضلات والظهر">Reduced muscle &amp; back pain</li>
+          <li data-en="More energy &amp; endurance" data-ar="طاقة وتحمّل أكبر">More energy &amp; endurance</li>
+          <li data-en="Greater emotional resilience" data-ar="مرونة نفسية أعلى">Greater emotional resilience</li>
+          <li data-en="Relief alongside chronic conditions" data-ar="راحة مصاحبة للحالات المزمنة">Relief alongside chronic conditions</li>
         </ul>
       </div>
     </div>
@@ -74,21 +81,21 @@
 
 <section class="section-alt" id="founder">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">The practitioner</div>
-      <h2>Trained in Bali. Practicing in Jeddah.</h2>
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="The practitioner" data-ar="الممارس">The practitioner</div>
+      <h2 data-en="Trained in Bali. Practicing in Jeddah." data-ar="تدرّب في بالي. يمارس في جدة.">Trained in Bali. Practicing in Jeddah.</h2>
     </div>
-    <div class="founder">
+    <div class="founder reveal">
       <div class="founder-card">
         <img class="mark" src="mark.png" alt="">
-        <div class="role">Founder &amp; Lead Practitioner</div>
+        <div class="role" data-en="Founder &amp; Lead Practitioner" data-ar="المؤسس والممارس الرئيسي">Founder &amp; Lead Practitioner</div>
         <h3>Mohammed Salah</h3>
-        <p class="tag">The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia.</p>
+        <p class="tag" data-en="The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia." data-ar="أول ممارس ناطق بالعربية في العالم يحصل على شهادة TRE Global. تأسست TRE أرابيا في 2018 بعد أن قابل محمد الدكتور David Berceli في ورشة تدريب متقدمة في بالي، إندونيسيا.">The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia.</p>
       </div>
       <div class="founder-quote">
-        <p>TRE Arabia's mission is to bring this modality to the region in a way that speaks the language — literally and culturally — of the people who need it: qualifying providers and trainers across the Arab world, with the direct support of Dr. David Berceli and the global TRE community.</p>
-        <p>Every session is delivered personally by Mohammed, drawing on training directly connected back to TRE's founder — not a franchise once removed.</p>
-        <div class="signed">— TRE Arabia, Jeddah</div>
+        <p data-en="TRE Arabia's mission is to bring this modality to the region in a way that speaks the language — literally and culturally — of the people who need it: qualifying providers and trainers across the Arab world, with the direct support of Dr. David Berceli and the global TRE community." data-ar="رسالة TRE أرابيا هي جلب هذه الطريقة إلى المنطقة بلغة أهلها — حرفيًا وثقافيًا: تأهيل ممارسين ومدربين في العالم العربي، بدعم مباشر من الدكتور David Berceli ومجتمع TRE العالمي.">TRE Arabia's mission is to bring this modality to the region in a way that speaks the language — literally and culturally — of the people who need it: qualifying providers and trainers across the Arab world, with the direct support of Dr. David Berceli and the global TRE community.</p>
+        <p data-en="Every session is delivered personally by Mohammed, drawing on training directly connected back to TRE's founder — not a franchise once removed." data-ar="كل جلسة يقدّمها محمد شخصيًا، بتدريب متصل مباشرة بمؤسس TRE — لا عبر امتياز بعيد عن المصدر.">Every session is delivered personally by Mohammed, drawing on training directly connected back to TRE's founder — not a franchise once removed.</p>
+        <div class="signed" data-en="— TRE Arabia, Jeddah" data-ar="— TRE أرابيا، جدة">— TRE Arabia, Jeddah</div>
       </div>
     </div>
   </div>
@@ -96,38 +103,110 @@
 
 <section id="how-it-works">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Getting started</div>
-      <h2>Three steps, at your pace</h2>
-      <p>No pressure, no commitment upfront — just a conversation first.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Getting started" data-ar="الخطوة الأولى">Getting started</div>
+      <h2 data-en="Three steps, at your pace" data-ar="ثلاث خطوات، بالسرعة التي تناسبك">Three steps, at your pace</h2>
+      <p data-en="No pressure, no commitment upfront — just a conversation first." data-ar="بدون ضغط أو التزام مسبق — فقط محادثة أولى.">No pressure, no commitment upfront — just a conversation first.</p>
     </div>
-    <div class="steps">
+    <div class="steps reveal">
       <div class="step">
         <div class="num">01</div>
-        <h4>Free discovery call</h4>
-        <p>A short conversation to understand what you're carrying and whether TRE is the right fit for you, right now.</p>
+        <h4 data-en="Free discovery call" data-ar="مكالمة تعارف مجانية">Free discovery call</h4>
+        <p data-en="A short conversation to understand what you're carrying and whether TRE is the right fit for you, right now." data-ar="محادثة قصيرة لفهم ما تحمله وما إذا كان TRE مناسبًا لك الآن.">A short conversation to understand what you're carrying and whether TRE is the right fit for you, right now.</p>
       </div>
       <div class="step">
         <div class="num">02</div>
-        <h4>Your first session</h4>
-        <p>A guided introduction to the seven exercises, in a safe, one-on-one setting led by Mohammed.</p>
+        <h4 data-en="Your first session" data-ar="جلستك الأولى">Your first session</h4>
+        <p data-en="A guided introduction to the seven exercises, in a safe, one-on-one setting led by Mohammed." data-ar="تعريف موجّه بالتمارين السبعة، في جلسة فردية آمنة يقودها محمد.">A guided introduction to the seven exercises, in a safe, one-on-one setting led by Mohammed.</p>
       </div>
       <div class="step">
         <div class="num">03</div>
-        <h4>Your own practice</h4>
-        <p>Continue with packages, group sessions, or move toward certification if you want to bring TRE to others.</p>
+        <h4 data-en="Your own practice" data-ar="ممارستك الخاصة">Your own practice</h4>
+        <p data-en="Continue with packages, group sessions, or move toward certification if you want to bring TRE to others." data-ar="استمر مع باقات، جلسات جماعية، أو نحو الشهادة إذا رغبت في تقديم TRE للآخرين.">Continue with packages, group sessions, or move toward certification if you want to bring TRE to others.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-alt" id="testimonials">
+<section class="section-alt" id="certification">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">In their own words</div>
-      <h2>Real stories, from real sessions</h2>
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="For practitioners" data-ar="للممارسين">For practitioners</div>
+      <h2 data-en="Become a certified TRE provider" data-ar="كن ممارسًا معتمدًا في TRE">Become a certified TRE provider</h2>
+      <p data-en="TRE Arabia trains and qualifies the next generation of Arabic-speaking providers, in direct partnership with TRE Global." data-ar="تُدرّب TRE أرابيا وتؤهّل الجيل القادم من الممارسين الناطقين بالعربية، بالتعاون المباشر مع TRE Global.">TRE Arabia trains and qualifies the next generation of Arabic-speaking providers, in direct partnership with TRE Global.</p>
     </div>
-    <div class="testi-grid">
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon">01</div>
+        <h4 data-en="Who it's for" data-ar="لمن هذا التدريب">Who it's for</h4>
+        <p data-en="Physiotherapists, mental health professionals, coaches, and wellness practitioners across the Arab world who want to add TRE to their practice." data-ar="أخصائيو العلاج الطبيعي، الصحة النفسية، المدرّبون، وممارسو العافية في العالم العربي الراغبون بإضافة TRE إلى ممارستهم.">Physiotherapists, mental health professionals, coaches, and wellness practitioners across the Arab world who want to add TRE to their practice.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">02</div>
+        <h4 data-en="What you get" data-ar="ما ستحصل عليه">What you get</h4>
+        <p data-en="Internationally recognized TRE Global certification, training rooted directly in Dr. Berceli's original methodology, delivered in Arabic." data-ar="شهادة TRE Global المعتمدة عالميًا، بتدريب متجذّر في منهجية الدكتور Berceli الأصلية، ومُقدّم باللغة العربية.">Internationally recognized TRE Global certification, training rooted directly in Dr. Berceli's original methodology, delivered in Arabic.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">03</div>
+        <h4 data-en="Where it leads" data-ar="إلى أين يقودك">Where it leads</h4>
+        <p data-en="Join a growing regional network of providers, with priority access to Dr. Berceli's future visits to Saudi Arabia." data-ar="انضم إلى شبكة إقليمية متنامية من الممارسين، مع أولوية الوصول لزيارات الدكتور Berceli القادمة للسعودية.">Join a growing regional network of providers, with priority access to Dr. Berceli's future visits to Saudi Arabia.</p>
+      </div>
+    </div>
+    <div class="cert-cta reveal">
+      <a href="#contact" class="btn btn-primary" data-en="Ask about certification" data-ar="استفسر عن الشهادة">Ask about certification</a>
+    </div>
+  </div>
+</section>
+
+<section id="organizations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="For organizations" data-ar="للمؤسسات">For organizations</div>
+      <h2 data-en="Bring TRE to your clinic, gym, or team" data-ar="قدّم TRE في عيادتك أو ناديك أو فريقك">Bring TRE to your clinic, gym, or team</h2>
+      <p data-en="TRE Arabia partners with physiotherapy clinics, wellness centers, and corporates across the region to bring nervous-system regulation to their clients and teams." data-ar="تتعاون TRE أرابيا مع عيادات العلاج الطبيعي ومراكز العافية والشركات في المنطقة لتقديم تنظيم الجهاز العصبي لعملائها وفرقها.">TRE Arabia partners with physiotherapy clinics, wellness centers, and corporates across the region to bring nervous-system regulation to their clients and teams.</p>
+    </div>
+    <div class="org-grid reveal">
+      <div class="org-card">
+        <h4 data-en="Clinics &amp; physiotherapy" data-ar="العيادات والعلاج الطبيعي">Clinics &amp; physiotherapy</h4>
+        <p data-en="Add TRE as a complementary offering for patients dealing with chronic tension, post-injury stress, or slow recovery." data-ar="أضف TRE كخدمة مكمّلة للمرضى الذين يعانون من توتر مزمن أو ضغط ما بعد الإصابة أو تعافٍ بطيء.">Add TRE as a complementary offering for patients dealing with chronic tension, post-injury stress, or slow recovery.</p>
+      </div>
+      <div class="org-card">
+        <h4 data-en="Gyms &amp; wellness centers" data-ar="الأندية ومراكز العافية">Gyms &amp; wellness centers</h4>
+        <p data-en="Offer members a nervous-system recovery tool that complements physical training and performance work." data-ar="قدّم لأعضائك أداة لتعافي الجهاز العصبي تُكمّل التدريب البدني وأداء الرياضيين.">Offer members a nervous-system recovery tool that complements physical training and performance work.</p>
+      </div>
+      <div class="org-card">
+        <h4 data-en="Corporate wellness" data-ar="عافية الشركات">Corporate wellness</h4>
+        <p data-en="Group sessions designed to reduce team burnout and support a calmer, more resilient workplace." data-ar="جلسات جماعية مصمّمة لتقليل الاحتراق الوظيفي ودعم بيئة عمل أكثر هدوءًا ومرونة.">Group sessions designed to reduce team burnout and support a calmer, more resilient workplace.</p>
+      </div>
+    </div>
+    <div class="cert-cta reveal">
+      <a href="#contact" class="btn btn-ghost" data-en="Discuss a partnership" data-ar="لنتحدث عن شراكة">Discuss a partnership</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="A look inside" data-ar="نظرة من الداخل">A look inside</div>
+      <h2 data-en="Sessions, in progress" data-ar="جلسات قيد التصوير">Sessions, in progress</h2>
+      <p data-en="Real photos and video from TRE Arabia sessions are on the way — check back soon." data-ar="صور ومقاطع حقيقية من جلسات TRE أرابيا قادمة قريبًا.">Real photos and video from TRE Arabia sessions are on the way — check back soon.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-tile"></div>
+      <div class="gallery-tile"></div>
+      <div class="gallery-tile"></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="In their own words" data-ar="بكلماتهم">In their own words</div>
+      <h2 data-en="Real stories, from real sessions" data-ar="قصص حقيقية من جلسات حقيقية">Real stories, from real sessions</h2>
+    </div>
+    <div class="testi-grid reveal">
       <div class="testi rtl">
         <p>التشافي هو حقيقة عاشتها رغد 🌿 كناجية من السرطان...</p>
         <div class="attrib">— رغد, TRE Arabia client</div>
@@ -142,17 +221,21 @@
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow" style="color:var(--brass);">Ready when you are</div>
-      <h2>Start with a free conversation</h2>
-      <p>Message us on WhatsApp to book your free discovery call — Mohammed replies personally.</p>
+    <div class="section-head reveal">
+      <div class="eyebrow" style="color:var(--brass);" data-en="Ready when you are" data-ar="نحن جاهزون حين تكون جاهزًا">Ready when you are</div>
+      <h2 data-en="Start with a free conversation" data-ar="ابدأ بمحادثة مجانية">Start with a free conversation</h2>
+      <p data-en="Message us on WhatsApp to book your free discovery call — Mohammed replies personally." data-ar="راسلنا على واتساب لحجز مكالمة تعارفك المجانية — يرد محمد شخصيًا.">Message us on WhatsApp to book your free discovery call — Mohammed replies personally.</p>
     </div>
-    <div class="contact-grid" style="grid-template-columns:1fr; max-width:480px;">
+    <div class="contact-grid reveal">
       <div class="contact-card">
-        <h4>WhatsApp</h4>
-        <p>Message us directly for a free discovery call, a first session, or any questions — Mohammed responds personally.</p>
-        <a class="btn btn-primary" href="https://wa.me/966568954047" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <div class="placeholder-note">Online booking (Fresha) coming soon — for now, everything is arranged directly over WhatsApp.</div>
+        <h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4>
+        <p data-en="Message us directly for a free discovery call, a first session, or any questions — Mohammed responds personally." data-ar="راسلنا مباشرة لحجز مكالمة تعارف مجانية أو جلستك الأولى أو أي استفسار — يرد محمد شخصيًا.">Message us directly for a free discovery call, a first session, or any questions — Mohammed responds personally.</p>
+        <a class="btn btn-primary" href="https://wa.me/966568954047" target="_blank" rel="noopener" data-en="Chat on WhatsApp" data-ar="تواصل على واتساب">Chat on WhatsApp</a>
+      </div>
+      <div class="contact-card contact-card-muted">
+        <h4 data-en="Online booking" data-ar="الحجز عبر الإنترنت">Online booking</h4>
+        <p data-en="Direct online booking is coming soon. Until then, WhatsApp is the fastest way to reach us." data-ar="الحجز المباشر عبر الإنترنت قادم قريبًا. حتى ذلك الحين، واتساب هو أسرع طريقة للتواصل معنا.">Direct online booking is coming soon. Until then, WhatsApp is the fastest way to reach us.</p>
+        <span class="coming-soon-badge" data-en="Coming soon" data-ar="قريبًا">Coming soon</span>
       </div>
     </div>
   </div>
@@ -160,14 +243,14 @@
 
 <footer>
   <div class="wrap">
-    <div>© <span id="year"></span> TRE Arabia · Jeddah, Saudi Arabia</div>
+    <div>© <span id="year"></span> <span data-en="TRE Arabia · Jeddah, Saudi Arabia" data-ar="TRE أرابيا · جدة، المملكة العربية السعودية">TRE Arabia · Jeddah, Saudi Arabia</span></div>
     <div class="foot-links">
       <a href="https://instagram.com/tre_arabia" target="_blank" rel="noopener">Instagram</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

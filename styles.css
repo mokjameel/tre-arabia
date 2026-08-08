@@ -28,7 +28,23 @@ body{
   font-weight:400;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  transition:background .3s ease;
 }
+
+/* ---------- ARABIC / RTL ---------- */
+body.lang-ar{ font-family:'Cairo', var(--sans); }
+body.lang-ar h1, body.lang-ar h2, body.lang-ar h3{ font-family:'Cairo', var(--serif); font-weight:700; font-style:normal; }
+body.lang-ar [dir="rtl-auto"], body.lang-ar{ direction:rtl; }
+body.lang-ar .nav-links, body.lang-ar .hero-actions, body.lang-ar .hero-stats,
+body.lang-ar .benefit-list li::before, body.lang-ar .foot-links{ direction:rtl; }
+body.lang-ar .benefit-list li{ padding-left:0; padding-right:20px; }
+body.lang-ar .benefit-list li::before{ left:auto; right:0; }
+body.lang-ar .hero-stats div{ border-left:none; border-right:2px solid var(--line); padding-left:0; padding-right:14px; }
+body.lang-ar .step, body.lang-ar .founder-quote{ text-align:right; }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in-view{ opacity:1; transform:translateY(0); }
 img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
 .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
@@ -55,12 +71,17 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:76px; }
-.nav-brand{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; color:var(--teal-deep); }
-.nav-brand img{ height:34px; width:34px; }
-.nav-brand-text{ display:flex; flex-direction:column; line-height:1.05; }
-.nav-brand-text .l1{ font-size:16px; letter-spacing:.14em; }
-.nav-brand-text .l2{ font-size:12.5px; letter-spacing:.14em; color:var(--sage); font-weight:500; margin-top:1px; }
-.nav-links{ display:flex; gap:30px; font-size:14.5px; font-weight:600; color:var(--teal-mid); }
+.nav-brand{ display:flex; align-items:center; gap:10px; }
+.nav-mark{ height:38px; width:auto; }
+.nav-wordmark{ height:22px; width:auto; margin-top:2px; }
+.nav-right{ display:flex; align-items:center; gap:16px; }
+.lang-toggle{
+  background:none; border:1.5px solid var(--teal-deep); color:var(--teal-deep);
+  font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.04em;
+  padding:8px 14px; border-radius:3px; cursor:pointer; transition:all .2s ease;
+}
+.lang-toggle:hover{ background:var(--teal-deep); color:var(--cream); }
+.nav-links{ display:flex; gap:26px; font-size:14px; font-weight:600; color:var(--teal-mid); }
 .nav-links a{ position:relative; padding:4px 0; }
 .nav-links a::after{
   content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:var(--brass);
@@ -73,7 +94,16 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   transition:background .2s ease;
 }
 .nav-cta:hover{ background:var(--teal-mid); }
-@media (max-width:760px){ .nav-links{ display:none; } }
+@media (max-width:760px){
+  .nav-links{ display:none; }
+  .nav .wrap{ gap:10px; }
+  .nav-mark{ height:30px; }
+  .nav-wordmark{ height:17px; }
+  .lang-toggle{ padding:7px 10px; font-size:11px; }
+  .nav-cta{ padding:9px 12px; font-size:12px; }
+  .nav-right{ gap:8px; }
+}
+
 
 /* ============================================================
    HERO — the signature moment: the spiral, breathing
@@ -173,6 +203,46 @@ section{ padding:88px 0; }
 @media (max-width:760px){ .testi-grid{ grid-template-columns:1fr; } }
 
 /* ============================================================
+   CERTIFICATION
+   ============================================================ */
+.cert-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+.cert-card{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:28px 24px; }
+.cert-icon{ font-family:var(--serif); font-style:italic; font-size:26px; color:var(--brass); margin-bottom:10px; }
+.cert-card h4{ font-family:var(--serif); font-size:18px; color:var(--teal-deep); margin-bottom:8px; }
+.cert-card p{ font-size:14px; color:var(--teal-mid); }
+.cert-cta{ margin-top:36px; text-align:center; }
+@media (max-width:860px){ .cert-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   ORGANIZATIONS
+   ============================================================ */
+.org-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+.org-card{
+  background:var(--cream-dim); border:1px solid var(--line); border-radius:6px; padding:28px 24px;
+  border-top:3px solid var(--teal-deep);
+}
+.org-card h4{ font-family:var(--serif); font-size:18px; color:var(--teal-deep); margin-bottom:8px; }
+.org-card p{ font-size:14px; color:var(--teal-mid); }
+@media (max-width:860px){ .org-grid{ grid-template-columns:1fr; } }
+
+/* ============================================================
+   GALLERY (honest placeholder state)
+   ============================================================ */
+.gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.gallery-tile{
+  aspect-ratio:4/5; border-radius:6px; position:relative; overflow:hidden;
+  background:
+    repeating-linear-gradient(115deg, rgba(23,51,44,.05) 0 2px, transparent 2px 14px),
+    linear-gradient(135deg, var(--cream-dim), #fff);
+  border:1px solid var(--line);
+}
+.gallery-tile::after{
+  content:'TRE Arabia'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-style:italic; font-size:15px; color:var(--sage); opacity:.5;
+}
+@media (max-width:760px){ .gallery-grid{ grid-template-columns:1fr 1fr; } .gallery-grid .gallery-tile:last-child{ display:none; } }
+
+/* ============================================================
    CONTACT
    ============================================================ */
 .contact{ background:var(--teal-deep); color:var(--cream); }
@@ -187,6 +257,12 @@ section{ padding:88px 0; }
 .contact-card .btn-primary{ background:var(--brass); color:var(--teal-deep); }
 .contact-card .btn-primary:hover{ background:#dbb96e; }
 .placeholder-note{ font-size:11.5px; color:#9FB0A9; margin-top:10px; font-style:italic; }
+.contact-card-muted{ opacity:.72; }
+.coming-soon-badge{
+  display:inline-block; font-size:11px; letter-spacing:.06em; text-transform:uppercase; font-weight:700;
+  padding:5px 12px; border-radius:20px; background:rgba(250,248,243,.12); color:var(--brass);
+  border:1px solid rgba(201,165,90,.4);
+}
 @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; } }
 
 /* ============================================================
