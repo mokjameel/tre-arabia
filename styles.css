@@ -71,10 +71,10 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   border-bottom:1px solid var(--line);
 }
 .nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:76px; }
-.nav-brand{ display:flex; align-items:center; gap:10px; }
-.nav-mark{ height:38px; width:auto; }
-.nav-wordmark{ height:22px; width:auto; margin-top:2px; }
-.nav-right{ display:flex; align-items:center; gap:16px; }
+.nav-left{ display:flex; align-items:center; gap:16px; }
+.nav-brand{ display:flex; align-items:center; gap:11px; }
+.nav-mark{ height:46px; width:auto; }
+.nav-wordmark{ height:27px; width:auto; margin-top:2px; }
 .lang-toggle{
   background:none; border:1.5px solid var(--teal-deep); color:var(--teal-deep);
   font-family:var(--sans); font-size:12.5px; font-weight:700; letter-spacing:.04em;
@@ -101,7 +101,7 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   .nav-wordmark{ height:17px; }
   .lang-toggle{ padding:7px 10px; font-size:11px; }
   .nav-cta{ padding:9px 12px; font-size:12px; }
-  .nav-right{ gap:8px; }
+  .nav-left{ gap:8px; }
 }
 
 
