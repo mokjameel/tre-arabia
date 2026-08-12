@@ -94,8 +94,37 @@ a:focus-visible, button:focus-visible{ outline:2px solid var(--brass); outline-o
   transition:background .2s ease;
 }
 .nav-cta:hover{ background:var(--teal-mid); }
+.nav-toggle{
+  display:none; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+  width:34px; height:34px; padding:0; border:none; background:none; cursor:pointer; flex-shrink:0;
+}
+.nav-toggle span{
+  display:block; width:22px; height:2px; background:var(--teal-deep); border-radius:1px;
+  transition:transform .25s ease, opacity .25s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+/* Hamburger takes over well before the 5 links + CTA can collide (measured
+   overlap starts ~800-950px depending on font rendering) — 1000px leaves
+   comfortable margin through the whole tablet-portrait range. */
+@media (max-width:1000px){
+  .nav-toggle{ display:flex; }
+  .nav-links{
+    display:flex; flex-direction:column; gap:0;
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--cream); border-bottom:1px solid var(--line);
+    box-shadow:0 12px 24px rgba(20,32,28,.08);
+    max-height:0; overflow:hidden; opacity:0; padding:0 24px;
+    transition:max-height .3s ease, opacity .2s ease;
+  }
+  .nav-links.open{ max-height:360px; opacity:1; padding:8px 24px 18px; }
+  .nav-links a{ padding:13px 0; border-bottom:1px solid var(--line); }
+  .nav-links a:last-child{ border-bottom:none; }
+  .nav-links a::after{ display:none; }
+  .nav .wrap{ position:relative; }
+}
 @media (max-width:760px){
-  .nav-links{ display:none; }
   .nav .wrap{ gap:10px; }
   .nav-mark{ height:30px; }
   .nav-wordmark{ height:17px; }
