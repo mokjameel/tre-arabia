@@ -8,32 +8,11 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Markazi+Text:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 
-<nav class="nav">
-  <div class="wrap">
-    <div class="nav-left">
-      <a href="#top" class="nav-brand">
-        <img src="mark.webp" alt="" class="nav-mark">
-        <img src="wordmark.webp" alt="TRE Arabia" class="nav-wordmark">
-      </a>
-      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">EN / <span class="ar-label">AR</span></button>
-    </div>
-    <div class="nav-links" id="nav-links">
-      <a href="#what-is-tre" data-en="What is TRE" data-ar="ما هو TRE">What is TRE</a>
-      <a href="#founder" data-en="Founder" data-ar="المؤسس">Founder</a>
-      <a href="#certification" data-en="Certification" data-ar="الشهادة">Certification</a>
-      <a href="#organizations" data-en="For Organizations" data-ar="للمؤسسات">For Organizations</a>
-      <a href="#testimonials" data-en="Stories" data-ar="قصص">Stories</a>
-    </div>
-    <a href="#contact" class="nav-cta" data-en="Book a discovery call" data-ar="احجز مكالمة تعارف">Book a discovery call</a>
-    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+<div id="site-nav"></div>
 
 <header class="hero" id="top">
   <div class="wrap hero-single">
@@ -58,6 +37,52 @@
     </div>
   </div>
 </header>
+
+<section id="who-its-for">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Find your path" data-ar="اختر مسارك">Find your path</div>
+      <h2 data-en="Who TRE Arabia is for" data-ar="لمن TRE أرابيا؟">Who TRE Arabia is for</h2>
+    </div>
+    <div class="persona-list reveal">
+      <a class="persona-card" href="for-individuals.html">
+        <div class="persona-card-text">
+          <h4 data-en="For yourself" data-ar="لنفسك">For yourself</h4>
+          <p data-en="TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake." data-ar="TRE® هو تمرين جسدي بسيط يساعد الجهاز العصبي على تصريف التوتر والضغط والصدمات القديمة — دون الحاجة للحديث عن التفاصيل، فقط سبعة تمارين ورعشة الجسم الطبيعية.">TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake.</p>
+        </div>
+        <span class="persona-card-link" data-en="Book a free discovery call" data-ar="احجز مكالمة تعارف مجانية">Book a free discovery call <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="persona-card" href="for-clinics.html">
+        <div class="persona-card-text">
+          <h4 data-en="Clinics &amp; physiotherapy" data-ar="العيادات والعلاج الطبيعي">Clinics &amp; physiotherapy</h4>
+          <p data-en="Add TRE as a complementary offering for patients dealing with chronic tension, post-injury stress, or slow recovery." data-ar="أضف TRE كخدمة مكمّلة للمرضى الذين يعانون من توتر مزمن أو ضغط ما بعد الإصابة أو تعافٍ بطيء.">Add TRE as a complementary offering for patients dealing with chronic tension, post-injury stress, or slow recovery.</p>
+        </div>
+        <span class="persona-card-link" data-en="Discuss a partnership" data-ar="لنتحدث عن شراكة">Discuss a partnership <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="persona-card" href="for-gyms.html">
+        <div class="persona-card-text">
+          <h4 data-en="Gyms &amp; wellness centers" data-ar="الأندية ومراكز العافية">Gyms &amp; wellness centers</h4>
+          <p data-en="Offer members a nervous-system recovery tool that complements physical training and performance work." data-ar="قدّم لأعضائك أداة لتعافي الجهاز العصبي تُكمّل التدريب البدني وأداء الرياضيين.">Offer members a nervous-system recovery tool that complements physical training and performance work.</p>
+        </div>
+        <span class="persona-card-link" data-en="Discuss a partnership" data-ar="لنتحدث عن شراكة">Discuss a partnership <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="persona-card" href="for-corporate.html">
+        <div class="persona-card-text">
+          <h4 data-en="Corporate wellness" data-ar="عافية الشركات">Corporate wellness</h4>
+          <p data-en="Group sessions designed to reduce team burnout and support a calmer, more resilient workplace." data-ar="جلسات جماعية مصمّمة لتقليل الاحتراق الوظيفي ودعم بيئة عمل أكثر هدوءًا ومرونة.">Group sessions designed to reduce team burnout and support a calmer, more resilient workplace.</p>
+        </div>
+        <span class="persona-card-link" data-en="Discuss a partnership" data-ar="لنتحدث عن شراكة">Discuss a partnership <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="persona-card" href="for-practitioners.html">
+        <div class="persona-card-text">
+          <h4 data-en="For practitioners" data-ar="للممارسين">For practitioners</h4>
+          <p data-en="TRE Arabia trains and qualifies the next generation of Arabic-speaking providers, in direct partnership with TRE Global." data-ar="تُدرّب TRE أرابيا وتؤهّل الجيل القادم من الممارسين الناطقين بالعربية، بالتعاون المباشر مع TRE Global.">TRE Arabia trains and qualifies the next generation of Arabic-speaking providers, in direct partnership with TRE Global.</p>
+        </div>
+        <span class="persona-card-link" data-en="Ask about certification" data-ar="استفسر عن الشهادة">Ask about certification <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section id="what-is-tre">
   <div class="wrap">
@@ -90,14 +115,14 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow" data-en="The practitioner" data-ar="الممارس">The practitioner</div>
-      <h2 data-en="Trained in Bali. Practicing across the Arab world." data-ar="تدرّب في بالي. يمارس في العالم العربي.">Trained in Bali. Practicing across the Arab world.</h2>
+      <h2 data-en="Trained in Thailand. Practicing across the Arab world." data-ar="تدرّب في تايلاند. يمارس في العالم العربي.">Trained in Thailand. Practicing across the Arab world.</h2>
     </div>
     <div class="founder reveal">
       <div class="founder-card">
         <img class="mark" src="mark.webp" alt="" loading="lazy">
         <div class="role" data-en="Founder &amp; Lead Practitioner" data-ar="المؤسس والممارس الرئيسي">Founder &amp; Lead Practitioner</div>
         <h3>Mohammed Salah</h3>
-        <p class="tag" data-en="The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia." data-ar="أول ممارس ناطق بالعربية في العالم يحصل على شهادة TRE Global. تأسست TRE أرابيا في 2018 بعد أن قابل محمد الدكتور David Berceli في ورشة تدريب متقدمة في بالي، إندونيسيا.">The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia.</p>
+        <p class="tag" data-en="The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Thailand." data-ar="أول ممارس ناطق بالعربية في العالم يحصل على شهادة TRE Global. تأسست TRE أرابيا في 2018 بعد أن قابل محمد الدكتور David Berceli في ورشة تدريب متقدمة في تايلاند.">The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Thailand.</p>
       </div>
       <div class="founder-quote">
         <p data-en="TRE Arabia's mission is to bring this modality to the region in a way that speaks the language — literally and culturally — of the people who need it: qualifying providers and trainers across the Arab world, with the direct support of Dr. David Berceli and the global TRE community." data-ar="رسالة TRE أرابيا هي جلب هذه الطريقة إلى المنطقة بلغة أهلها — حرفيًا وثقافيًا: تأهيل ممارسين ومدربين في العالم العربي، بدعم مباشر من الدكتور David Berceli ومجتمع TRE العالمي.">TRE Arabia's mission is to bring this modality to the region in a way that speaks the language — literally and culturally — of the people who need it: qualifying providers and trainers across the Arab world, with the direct support of Dr. David Berceli and the global TRE community.</p>
@@ -301,16 +326,8 @@
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div>© <span id="year"></span> <span data-en="TRE Arabia" data-ar="TRE أرابيا">TRE Arabia</span></div>
-    <div class="foot-links">
-      <a href="https://instagram.com/tre_arabia" target="_blank" rel="noopener">Instagram</a>
-      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
