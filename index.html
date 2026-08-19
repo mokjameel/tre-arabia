@@ -7,8 +7,8 @@
 <meta name="description" content="TRE Arabia brings Tension & Trauma Releasing Exercises to the Arab world, led by Mohammed Salah — the first Arabic-speaking TRE Global–certified practitioner in the world.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Markazi+Text:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 
@@ -16,8 +16,8 @@
   <div class="wrap">
     <div class="nav-left">
       <a href="#top" class="nav-brand">
-        <img src="mark.png" alt="" class="nav-mark">
-        <img src="wordmark.png" alt="TRE Arabia" class="nav-wordmark">
+        <img src="mark.webp" alt="" class="nav-mark">
+        <img src="wordmark.webp" alt="TRE Arabia" class="nav-wordmark">
       </a>
       <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">EN / <span class="ar-label">AR</span></button>
     </div>
@@ -39,7 +39,11 @@
   <div class="wrap hero-single">
     <div class="hero-content reveal">
       <div class="eyebrow hero-eyebrow" data-en="TRE Arabia · Nervous system care for the Arab world" data-ar="TRE أرابيا · رعاية الجهاز العصبي للعالم العربي">TRE Arabia · Nervous system care for the Arab world</div>
-      <img src="hero-lockup.png" alt="TRE Arabia — Release begins within" class="hero-lockup">
+      <div class="hero-lockup-wrap">
+        <span class="hero-glow" aria-hidden="true"></span>
+        <span class="hero-ring" aria-hidden="true"></span>
+        <img src="hero-lockup.webp" alt="TRE Arabia — Release begins within" class="hero-lockup" fetchpriority="high">
+      </div>
       <h1 class="sr-only">Release begins within.</h1>
       <p class="lede" data-en="TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake." data-ar="TRE® هو تمرين جسدي بسيط يساعد الجهاز العصبي على تصريف التوتر والضغط والصدمات القديمة — دون الحاجة للحديث عن التفاصيل، فقط سبعة تمارين ورعشة الجسم الطبيعية.">TRE® is a simple, body-based practice that helps the nervous system let go of stress, tension, and old trauma — no talking required, just seven exercises and the body's own natural shake.</p>
       <div class="hero-actions">
@@ -90,7 +94,7 @@
     </div>
     <div class="founder reveal">
       <div class="founder-card">
-        <img class="mark" src="mark.png" alt="">
+        <img class="mark" src="mark.webp" alt="" loading="lazy">
         <div class="role" data-en="Founder &amp; Lead Practitioner" data-ar="المؤسس والممارس الرئيسي">Founder &amp; Lead Practitioner</div>
         <h3>Mohammed Salah</h3>
         <p class="tag" data-en="The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia." data-ar="أول ممارس ناطق بالعربية في العالم يحصل على شهادة TRE Global. تأسست TRE أرابيا في 2018 بعد أن قابل محمد الدكتور David Berceli في ورشة تدريب متقدمة في بالي، إندونيسيا.">The first Arabic-speaking practitioner in the world to be certified by TRE Global. TRE Arabia was founded in 2018 after Mohammed met Dr. David Berceli at a TRE Advanced Workshop in Bali, Indonesia.</p>
@@ -131,6 +135,58 @@
   </div>
 </section>
 
+<section id="quiz">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="A quick check-in" data-ar="تحقق سريع">A quick check-in</div>
+      <h2 data-en="Is TRE right for you?" data-ar="هل TRE مناسب لك؟">Is TRE right for you?</h2>
+      <p data-en="Three quick questions — no email required, no wrong answers." data-ar="ثلاثة أسئلة سريعة — بدون بريد إلكتروني، ولا إجابات خاطئة.">Three quick questions — no email required, no wrong answers.</p>
+    </div>
+    <div class="quiz-card reveal" id="tre-quiz">
+      <div class="quiz-progress" aria-hidden="true">
+        <span class="quiz-dot" data-step="1"></span>
+        <span class="quiz-dot" data-step="2"></span>
+        <span class="quiz-dot" data-step="3"></span>
+      </div>
+
+      <div class="quiz-question" data-quiz-step="1">
+        <div class="quiz-num">01</div>
+        <h4 data-en="Do you often feel physically tense, even when resting?" data-ar="هل تشعر غالبًا بتوتر جسدي حتى عند الراحة؟">Do you often feel physically tense, even when resting?</h4>
+        <div class="quiz-answers">
+          <button type="button" class="quiz-answer" data-en="Yes" data-ar="نعم">Yes</button>
+          <button type="button" class="quiz-answer" data-en="No" data-ar="لا">No</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-quiz-step="2" hidden>
+        <div class="quiz-num">02</div>
+        <h4 data-en="Have you experienced stress, anxiety, or a difficult life event you're still carrying?" data-ar="هل مررت بضغط نفسي أو قلق أو حدث حياتي صعب ما زلت تحمله؟">Have you experienced stress, anxiety, or a difficult life event you're still carrying?</h4>
+        <div class="quiz-answers">
+          <button type="button" class="quiz-answer" data-en="Yes" data-ar="نعم">Yes</button>
+          <button type="button" class="quiz-answer" data-en="No" data-ar="لا">No</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-quiz-step="3" hidden>
+        <div class="quiz-num">03</div>
+        <h4 data-en="Are you open to trying a body-based practice, even if it feels unfamiliar at first?" data-ar="هل أنت منفتح لتجربة ممارسة جسدية، حتى لو بدت غير مألوفة في البداية؟">Are you open to trying a body-based practice, even if it feels unfamiliar at first?</h4>
+        <div class="quiz-answers">
+          <button type="button" class="quiz-answer" data-en="Yes" data-ar="نعم">Yes</button>
+          <button type="button" class="quiz-answer" data-en="No" data-ar="لا">No</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" data-quiz-result hidden>
+        <div class="quiz-num">—</div>
+        <h4 data-en="TRE could be a great fit for you" data-ar="قد يكون TRE مناسبًا تمامًا لك">TRE could be a great fit for you</h4>
+        <p data-en="Wherever you landed on these questions, that's exactly the right place to start a conversation. A free discovery call is a low-pressure way to find out — no commitment, just Mohammed listening and answering your questions." data-ar="أينما كانت إجاباتك، فهذه بالضبط النقطة الصحيحة لبدء محادثة. مكالمة التعارف المجانية طريقة بسيطة وبدون أي ضغط لتكتشف ذلك — بدون التزام، فقط محمد يستمع ويجيب عن أسئلتك.">Wherever you landed on these questions, that's exactly the right place to start a conversation. A free discovery call is a low-pressure way to find out — no commitment, just Mohammed listening and answering your questions.</p>
+        <a class="btn btn-primary" href="https://wa.me/966568954047?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call" data-href-en="https://wa.me/966568954047?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call" data-href-ar="https://wa.me/966568954047?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%AA%D8%B9%D8%A7%D8%B1%D9%81%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener" data-en="Book your free discovery call" data-ar="احجز مكالمة تعارفك المجانية">Book your free discovery call</a>
+        <button type="button" class="quiz-restart" data-en="Retake the quiz" data-ar="أعد الاختبار">Retake the quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-alt" id="certification">
   <div class="wrap">
     <div class="section-head reveal">
@@ -144,7 +200,7 @@
         <h4 data-en="Who it's for" data-ar="لمن هذا التدريب">Who it's for</h4>
         <p data-en="Physiotherapists, mental health professionals, coaches, and wellness practitioners across the Arab world who want to add TRE to their practice." data-ar="أخصائيو العلاج الطبيعي، الصحة النفسية، المدرّبون، وممارسو العافية في العالم العربي الراغبون بإضافة TRE إلى ممارستهم.">Physiotherapists, mental health professionals, coaches, and wellness practitioners across the Arab world who want to add TRE to their practice.</p>
       </div>
-      <div class="cert-card">
+      <div class="cert-card cert-card--featured">
         <div class="cert-icon">02</div>
         <h4 data-en="What you get" data-ar="ما ستحصل عليه">What you get</h4>
         <p data-en="Internationally recognized TRE Global certification, training rooted directly in Dr. Berceli's original methodology, delivered in Arabic." data-ar="شهادة TRE Global المعتمدة عالميًا، بتدريب متجذّر في منهجية الدكتور Berceli الأصلية، ومُقدّم باللغة العربية.">Internationally recognized TRE Global certification, training rooted directly in Dr. Berceli's original methodology, delivered in Arabic.</p>
@@ -204,6 +260,7 @@
 </section>
 
 <section id="testimonials">
+  <img class="section-mark" src="mark.webp" alt="" aria-hidden="true" loading="lazy">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow" data-en="In their own words" data-ar="بكلماتهم">In their own words</div>
@@ -225,7 +282,7 @@
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" style="color:var(--brass);" data-en="Ready when you are" data-ar="نحن جاهزون حين تكون جاهزًا">Ready when you are</div>
+      <div class="eyebrow" data-en="Ready when you are" data-ar="نحن جاهزون حين تكون جاهزًا">Ready when you are</div>
       <h2 data-en="Start with a free conversation" data-ar="ابدأ بمحادثة مجانية">Start with a free conversation</h2>
       <p data-en="Message us on WhatsApp to book your free discovery call — Mohammed replies personally." data-ar="راسلنا على واتساب لحجز مكالمة تعارفك المجانية — يرد محمد شخصيًا.">Message us on WhatsApp to book your free discovery call — Mohammed replies personally.</p>
     </div>
@@ -233,7 +290,7 @@
       <div class="contact-card">
         <h4 data-en="WhatsApp" data-ar="واتساب">WhatsApp</h4>
         <p data-en="Message us directly for a free discovery call, a first session, or any questions — Mohammed responds personally." data-ar="راسلنا مباشرة لحجز مكالمة تعارف مجانية أو جلستك الأولى أو أي استفسار — يرد محمد شخصيًا.">Message us directly for a free discovery call, a first session, or any questions — Mohammed responds personally.</p>
-        <a class="btn btn-primary" href="https://wa.me/966568954047" target="_blank" rel="noopener" data-en="Chat on WhatsApp" data-ar="تواصل على واتساب">Chat on WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/966568954047?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call" data-href-en="https://wa.me/966568954047?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20discovery%20call" data-href-ar="https://wa.me/966568954047?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D9%85%D9%83%D8%A7%D9%84%D9%85%D8%A9%20%D8%AA%D8%B9%D8%A7%D8%B1%D9%81%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener" data-en="Chat on WhatsApp" data-ar="تواصل على واتساب">Chat on WhatsApp</a>
       </div>
       <div class="contact-card contact-card-muted">
         <h4 data-en="Online booking" data-ar="الحجز عبر الإنترنت">Online booking</h4>
@@ -254,6 +311,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=9"></script>
 </body>
 </html>

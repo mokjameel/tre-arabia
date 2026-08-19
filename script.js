@@ -1,5 +1,13 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ---------- Nav scroll shadow ----------
+const navEl = document.querySelector('.nav');
+if (navEl) {
+  const updateNavShadow = () => navEl.classList.toggle('is-scrolled', window.scrollY > 8);
+  updateNavShadow();
+  window.addEventListener('scroll', updateNavShadow, { passive: true });
+}
+
 // ---------- Scroll reveal ----------
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
@@ -39,6 +47,11 @@ function applyLang(lang) {
     const text = lang === 'ar' ? node.getAttribute('data-ar') : node.getAttribute('data-en');
     if (text) node.textContent = text;
   });
+  const hrefNodes = document.querySelectorAll('[data-href-en]');
+  hrefNodes.forEach(node => {
+    const href = lang === 'ar' ? node.getAttribute('data-href-ar') : node.getAttribute('data-href-en');
+    if (href) node.setAttribute('href', href);
+  });
   htmlRoot.setAttribute('lang', lang);
   htmlRoot.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
   document.body.classList.toggle('lang-ar', lang === 'ar');
@@ -51,3 +64,51 @@ langToggle.addEventListener('click', () => {
 });
 
 applyLang(currentLang);
+
+// ---------- "Is TRE right for you?" quiz ----------
+const quizCard = document.getElementById('tre-quiz');
+if (quizCard) {
+  const quizSteps = Array.from(quizCard.querySelectorAll('[data-quiz-step]'));
+  const quizDots = Array.from(quizCard.querySelectorAll('.quiz-dot'));
+  const quizResult = quizCard.querySelector('[data-quiz-result]');
+
+  function showQuizStep(stepNum) {
+    quizSteps.forEach(step => {
+      step.hidden = Number(step.dataset.quizStep) !== stepNum;
+    });
+    quizResult.hidden = true;
+    quizDots.forEach(dot => {
+      const dotStep = Number(dot.dataset.step);
+      dot.classList.toggle('is-active', dotStep === stepNum);
+      dot.classList.toggle('is-done', dotStep < stepNum);
+    });
+  }
+
+  function showQuizResult() {
+    quizSteps.forEach(step => { step.hidden = true; });
+    quizResult.hidden = false;
+    quizDots.forEach(dot => {
+      dot.classList.add('is-done');
+      dot.classList.remove('is-active');
+    });
+  }
+
+  quizCard.addEventListener('click', (e) => {
+    const answerBtn = e.target.closest('.quiz-answer');
+    if (answerBtn) {
+      const currentStep = answerBtn.closest('[data-quiz-step]');
+      const stepNum = Number(currentStep.dataset.quizStep);
+      if (stepNum < quizSteps.length) {
+        showQuizStep(stepNum + 1);
+      } else {
+        showQuizResult();
+      }
+      return;
+    }
+    if (e.target.closest('.quiz-restart')) {
+      showQuizStep(1);
+    }
+  });
+
+  showQuizStep(1);
+}
